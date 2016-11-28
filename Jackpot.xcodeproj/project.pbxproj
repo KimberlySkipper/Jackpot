@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		2C14D1401DECB1BF009C9C3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D13F1DECB1BF009C9C3C /* main.m */; };
 		2C14D1431DECB1BF009C9C3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1421DECB1BF009C9C3C /* AppDelegate.m */; };
-		2C14D1461DECB1BF009C9C3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1451DECB1BF009C9C3C /* ViewController.m */; };
+		2C14D1461DECB1BF009C9C3C /* JackpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1451DECB1BF009C9C3C /* JackpotViewController.m */; };
 		2C14D1491DECB1BF009C9C3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D1471DECB1BF009C9C3C /* Main.storyboard */; };
 		2C14D14B1DECB1BF009C9C3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */; };
 		2C14D14E1DECB1BF009C9C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D14C1DECB1BF009C9C3C /* LaunchScreen.storyboard */; };
+		2C14D1571DECB39E009C9C3C /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1561DECB39E009C9C3C /* Ticket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		2C14D13F1DECB1BF009C9C3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C14D1411DECB1BF009C9C3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C14D1421DECB1BF009C9C3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2C14D1441DECB1BF009C9C3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C14D1451DECB1BF009C9C3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C14D1441DECB1BF009C9C3C /* JackpotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JackpotViewController.h; sourceTree = "<group>"; };
+		2C14D1451DECB1BF009C9C3C /* JackpotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackpotViewController.m; sourceTree = "<group>"; };
 		2C14D1481DECB1BF009C9C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C14D14D1DECB1BF009C9C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C14D14F1DECB1BF009C9C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C14D1551DECB39E009C9C3C /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		2C14D1561DECB39E009C9C3C /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +63,10 @@
 			children = (
 				2C14D1411DECB1BF009C9C3C /* AppDelegate.h */,
 				2C14D1421DECB1BF009C9C3C /* AppDelegate.m */,
-				2C14D1441DECB1BF009C9C3C /* ViewController.h */,
-				2C14D1451DECB1BF009C9C3C /* ViewController.m */,
+				2C14D1441DECB1BF009C9C3C /* JackpotViewController.h */,
+				2C14D1451DECB1BF009C9C3C /* JackpotViewController.m */,
+				2C14D1551DECB39E009C9C3C /* Ticket.h */,
+				2C14D1561DECB39E009C9C3C /* Ticket.m */,
 				2C14D1471DECB1BF009C9C3C /* Main.storyboard */,
 				2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */,
 				2C14D14C1DECB1BF009C9C3C /* LaunchScreen.storyboard */,
@@ -150,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C14D1461DECB1BF009C9C3C /* ViewController.m in Sources */,
+				2C14D1571DECB39E009C9C3C /* Ticket.m in Sources */,
+				2C14D1461DECB1BF009C9C3C /* JackpotViewController.m in Sources */,
 				2C14D1431DECB1BF009C9C3C /* AppDelegate.m in Sources */,
 				2C14D1401DECB1BF009C9C3C /* main.m in Sources */,
 			);
