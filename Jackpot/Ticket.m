@@ -10,6 +10,8 @@
 // make the jackpot ticket private.
 @interface Ticket ()
 {
+    NSUInteger _number;
+    
     //create an instance for each number
     NSUInteger _number1;
     NSUInteger _number2;
@@ -17,6 +19,9 @@
     NSUInteger _number4;
     NSUInteger _number5;
     NSUInteger _number6;
+    
+    //Declare instance NSMutable Array
+    NSMutableArray *numberArray;
 }
 
 @end
@@ -24,29 +29,40 @@
 @implementation Ticket
 
 
+
+
+
 -(instancetype)initWithQuickPick
 {
-    self =[super init];
-    if (self)
     {
-        _number1 = arc4random() % 54;
-        _number2 = arc4random() % 54;
-        _number3 = arc4random() % 54;
-        _number4 = arc4random() % 54;
-        _number5 = arc4random() % 54;
-        _number6 = arc4random() % 54;
+        self = [super init];
+        if (self)
+        {
+            numberArray = [[NSMutableArray alloc] init];
+            
+            for (int i = 0; i < 6; i++)
+            {
+                NSUInteger randomInt = 0;
+                NSNumber *randomNumber;
+                do
+                {
+                    randomInt = arc4random() % 54 + 1;
+                    randomNumber = [NSNumber numberWithUnsignedInteger:randomInt];
+                }
+                while ([numberArray containsObject:randomNumber]);
+                [numberArray addObject:randomNumber];
+            }
+        }
+        return self;
     }
- 
-    return self;
+    
 }
-//if aNumber is generated then do not repeat.
-//[appendstring:initWithQuickPick]
-
-
-// this method is used to convert int to string
 - (NSString *)ticketText
 {
-    return [NSString stringWithFormat:@"%ld    %ld    %ld    %ld    %ld    %ld", _number1, _number2, _number3, _number4, _number5,_number6];
+    return [NSString stringWithFormat:@"%@  %@  %@  %@  %@  %@", [numberArray[0] stringValue],[numberArray[1] stringValue], [numberArray[2]stringValue], [numberArray[3] stringValue], [numberArray[4] stringValue], [numberArray [5] stringValue] ];
 }
 
+
 @end
+
+
