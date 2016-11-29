@@ -18,15 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" textLabel="Fms-CU-9hp" style="IBUITableViewCellStyleDefault" id="gGc-W7-FB9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" textLabel="Fms-CU-9hp" detailTextLabel="Mda-LM-rVZ" style="IBUITableViewCellStyleValue1" id="gGc-W7-FB9">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gGc-W7-FB9" id="Hxj-Oq-8wa">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fms-CU-9hp">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text=" Ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fms-CU-9hp">
+                                            <rect key="frame" x="15" y="11" width="52" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="$$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mda-LM-rVZ">
+                                            <rect key="frame" x="328" y="11" width="32" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -42,6 +49,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Jackpot" id="JWj-Yt-Nrl">
+                        <barButtonItem key="leftBarButtonItem" title="Check Ticket" id="zlj-EN-m9i">
+                            <connections>
+                                <segue destination="E5R-hC-kam" kind="show" id="Sk5-5Z-Nlu"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q59-y1-cMf">
                             <connections>
                                 <action selector="addTicket:" destination="mSx-dN-Dm0" id="afr-g9-Ok1"/>
@@ -52,6 +64,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wM-h5-UVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="121.88905547226388"/>
+        </scene>
+        <!--Winning Number View Controller-->
+        <scene sceneID="lj4-CJ-308">
+            <objects>
+                <viewController id="E5R-hC-kam" customClass="WinningNumberViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WEd-h1-cpg"/>
+                        <viewControllerLayoutGuide type="bottom" id="jyv-3S-BJ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e8c-Mc-f45">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-OB-GeD">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="E5R-hC-kam" id="3v4-sc-qHA"/>
+                                    <outlet property="delegate" destination="E5R-hC-kam" id="5hP-eS-7Aa"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-go-gqk">
+                                <rect key="frame" x="49" y="120" width="285" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Winner Winner Chicken Dinner"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="6rg-OB-GeD" id="HKM-6e-aCD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gl-mN-R7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784.8" y="121.88905547226388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kM0-c7-kKW">

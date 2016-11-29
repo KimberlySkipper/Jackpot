@@ -14,6 +14,7 @@
 		2C14D14B1DECB1BF009C9C3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */; };
 		2C14D14E1DECB1BF009C9C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D14C1DECB1BF009C9C3C /* LaunchScreen.storyboard */; };
 		2C14D1571DECB39E009C9C3C /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1561DECB39E009C9C3C /* Ticket.m */; };
+		2C14D15D1DEE2AA9009C9C3C /* WinningNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D15C1DEE2AA9009C9C3C /* WinningNumberViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		2C14D14F1DECB1BF009C9C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C14D1551DECB39E009C9C3C /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		2C14D1561DECB39E009C9C3C /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		2C14D15B1DEE2AA9009C9C3C /* WinningNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningNumberViewController.h; sourceTree = "<group>"; };
+		2C14D15C1DEE2AA9009C9C3C /* WinningNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningNumberViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				2C14D1551DECB39E009C9C3C /* Ticket.h */,
 				2C14D1561DECB39E009C9C3C /* Ticket.m */,
 				2C14D1471DECB1BF009C9C3C /* Main.storyboard */,
+				2C14D15B1DEE2AA9009C9C3C /* WinningNumberViewController.h */,
+				2C14D15C1DEE2AA9009C9C3C /* WinningNumberViewController.m */,
 				2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */,
 				2C14D14C1DECB1BF009C9C3C /* LaunchScreen.storyboard */,
 				2C14D14F1DECB1BF009C9C3C /* Info.plist */,
@@ -157,6 +162,7 @@
 			files = (
 				2C14D1571DECB39E009C9C3C /* Ticket.m in Sources */,
 				2C14D1461DECB1BF009C9C3C /* JackpotViewController.m in Sources */,
+				2C14D15D1DEE2AA9009C9C3C /* WinningNumberViewController.m in Sources */,
 				2C14D1431DECB1BF009C9C3C /* AppDelegate.m in Sources */,
 				2C14D1401DECB1BF009C9C3C /* main.m in Sources */,
 			);
@@ -313,6 +319,7 @@
 				2C14D1541DECB1BF009C9C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

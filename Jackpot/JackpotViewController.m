@@ -9,7 +9,7 @@
 #import "JackpotViewController.h"
 #import "Ticket.h"
 
-@interface JackpotViewController () 
+@interface JackpotViewController () <UIPickerViewDelegate>
 
 @property NSMutableArray *listOfTickets;
 
