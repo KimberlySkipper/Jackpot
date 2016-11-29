@@ -11,7 +11,6 @@
 @interface Ticket : NSObject
 
 -(instancetype)initWithQuickPick;
-
-//-(NSString *)ticketText;
+-(NSString *)ticketText;
 
 @end

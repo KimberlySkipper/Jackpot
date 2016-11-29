@@ -11,7 +11,7 @@
 
 @interface JackpotViewController () 
 
-@property NSMutableArray *tickets;
+@property NSMutableArray *listOfTickets;
 
 
 @end
@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.tickets = [[NSMutableArray alloc] init];
+    self.listOfTickets = [[NSMutableArray alloc] init];
 }
 
 
@@ -32,7 +32,12 @@
 
 -(IBAction)addTicket:(UIBarButtonItem *)sender
 {
-    [self.tickets addObject:[[Ticket alloc] initWithQuickPick]];
+   // Ticket *tmpTicket = [[Ticket alloc] initWithQuickPick];
+    
+   // [self.listOfTickets addObject:tmpTicket];
+    
+    [self.listOfTickets addObject:[[Ticket alloc] initWithQuickPick]];
+
     
     [self.tableView reloadData];
 }
@@ -45,17 +50,18 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.tickets.count;
+    return self.listOfTickets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TicketCell" forIndexPath:indexPath];
     
+    //Using the row to get a ticket for a specific row.
+    Ticket *aTicket = self.listOfTickets[indexPath.row];
     
-   // Jackpot *aTicket = self.ticketNumber[indexPath.row];
-   // cell.textLabel.text = aTicket;
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)arc4random() % 54];
+    //Printing a ticket to a cell.
+    cell.textLabel.text = [aTicket ticketText];
 
     
     return cell;

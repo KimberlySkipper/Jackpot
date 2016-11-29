@@ -28,6 +28,14 @@
     }
     return self;
 }
+//  if there is a number then append sring with random number until there are six numbers.
+//[appendstring:initWithQuickPick]
+// forLoop i=1, i<=5, i++
 
+// this method is used to convert int to string
+- (NSString *)ticketText
+{
+    return [NSString stringWithFormat:@"%ld", (long)_number];
+}
 
 @end
