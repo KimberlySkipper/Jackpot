@@ -22,18 +22,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gGc-W7-FB9" id="Hxj-Oq-8wa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text=" Ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fms-CU-9hp">
-                                            <rect key="frame" x="15" y="11" width="52" height="21"/>
+                                            <rect key="frame" x="15" y="12" width="51.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="$$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mda-LM-rVZ">
-                                            <rect key="frame" x="328" y="11" width="32" height="21"/>
+                                            <rect key="frame" x="328" y="12" width="32" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" title="Jackpot" id="JWj-Yt-Nrl">
                         <barButtonItem key="leftBarButtonItem" title="Check Ticket" id="zlj-EN-m9i">
                             <connections>
-                                <segue destination="E5R-hC-kam" kind="show" id="Sk5-5Z-Nlu"/>
+                                <segue destination="E5R-hC-kam" kind="show" identifier="winningNumberPickerViewSegue" id="Sk5-5Z-Nlu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q59-y1-cMf">

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JackpotViewController.h"
 
 @interface WinningNumberViewController : UIViewController
+
+@property (nonatomic) id<WinningNumberPickerViewDelegate> delegate;
 
 @end

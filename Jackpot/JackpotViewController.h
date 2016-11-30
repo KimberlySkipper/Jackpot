@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WinningNumberPickerViewDelegate
+
+-(void)winningTicketWasChosen:(NSMutableArray *) winningNumbers;
+
+@end
+
 @interface JackpotViewController : UITableViewController
+
 
 
 @end
