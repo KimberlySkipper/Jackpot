@@ -32,11 +32,16 @@
 
 -(IBAction)compareWinningTicket:(UIButton *)sender
 {
+    // get numbers from gui, put into array
+    
+    // call delegate numberwaschosen ( array )
+    
+    // segway back to original viewer
     NSUInteger winningNumber = [self.winningTicketPickerView selectedRowInComponent:5] + 1;
     
-   /* UIPickerViewDelegate *delegate = yourPickerView.delegate;
-    NSString *titleYouWant = [delegate pickerView:yourPickerView titleForRow:[yourPickerView selectedRowInComponent:0] forComponent:0];
-*/
+    /*UIPickerViewDelegate *delegate = self.delegate;
+    NSString *titleYouWant = [delegate pickerView:yourPickerView titleForRow:[yourPickerView selectedRowInComponent:0] forComponent:0]; */
+
     return;
 }
 

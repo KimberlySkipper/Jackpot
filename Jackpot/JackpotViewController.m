@@ -30,6 +30,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)winningTicketWasChosen:(NSMutableArray *) winningNumbers{
+    NSLog(@"hell.....o");
+}
+
 
 -(IBAction)addTicket:(UIBarButtonItem *)sender
 {
@@ -42,6 +46,10 @@
     
     [self.tableView reloadData];
 }
+
+
+
+
 
 #pragma mark - Table view Data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
