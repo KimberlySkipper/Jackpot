@@ -13,4 +13,8 @@
 -(instancetype)initWithQuickPick;
 -(NSString *)ticketText;
 
+-(void)checkWithWinningTicket: winningTicket;
+
+@property (assign) NSUInteger *howManyNumbersMatch;
+
 @end

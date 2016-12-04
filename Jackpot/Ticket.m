@@ -13,12 +13,12 @@
     NSUInteger _number;
     
     //create an instance for each number
-    NSUInteger _number1;
+    /*NSUInteger _number1;
     NSUInteger _number2;
     NSUInteger _number3;
     NSUInteger _number4;
     NSUInteger _number5;
-    NSUInteger _number6;
+    NSUInteger _number6; */
     
     //Declare instance NSMutable Array
     NSMutableArray *numberArray;
@@ -60,6 +60,20 @@
 - (NSString *)ticketText
 {
     return [NSString stringWithFormat:@"%@  %@  %@  %@  %@  %@", [numberArray[0] stringValue],[numberArray[1] stringValue], [numberArray[2]stringValue], [numberArray[3] stringValue], [numberArray[4] stringValue], [numberArray [5] stringValue] ];
+}
+
+
+//Checking an array against and array
+-(void)checkWithWinningTicket:(NSMutableArray *)winningNumbers
+{
+    //i=0 happens once, the loop will continue until les than 6 isn't true, while less than 6 is true after it completes what it wants to in the loop it will i++ increment by one.
+    for (int i=0; i<6; i++)
+    {
+        if ([numberArray containsObject:winningNumbers[i]])
+        {
+            self.howManyNumbersMatch++;
+        }
+    }
 }
 
 

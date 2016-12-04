@@ -10,9 +10,11 @@
 #import "JackpotViewController.h"
 #import "Ticket.h"
 
-@interface WinningNumberViewController () <UIPickerViewDelegate,UIPickerViewDataSource, WinningNumberPickerViewDelegate>
+@interface WinningNumberViewController () <UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property(weak, nonatomic) IBOutlet UIPickerView *winningTicketPickerView;
+
+@property NSMutableArray *winningNumbers;
 
 @end
 
@@ -32,16 +34,28 @@
 
 -(IBAction)compareWinningTicket:(UIButton *)sender
 {
-    // get numbers from gui, put into array
+    self.winningNumbers  = [[NSMutableArray alloc] init];
     
-    // call delegate numberwaschosen ( array )
+    NSUInteger tmp = [self.winningTicketPickerView selectedRowInComponent:0];
+    [self.winningNumbers addObject:[NSNumber numberWithInteger:tmp]];
     
-    // segway back to original viewer
-    NSUInteger winningNumber = [self.winningTicketPickerView selectedRowInComponent:5] + 1;
+    tmp = [self.winningTicketPickerView selectedRowInComponent:1];
+    [self.winningNumbers addObject:[NSNumber numberWithInteger:tmp]];
     
-    /*UIPickerViewDelegate *delegate = self.delegate;
-    NSString *titleYouWant = [delegate pickerView:yourPickerView titleForRow:[yourPickerView selectedRowInComponent:0] forComponent:0]; */
-
+    tmp = [self.winningTicketPickerView selectedRowInComponent:2];
+    [self.winningNumbers addObject:[NSNumber numberWithInteger:tmp]];
+    
+    tmp = [self.winningTicketPickerView selectedRowInComponent:3];
+    [self.winningNumbers addObject:[NSNumber numberWithInteger:tmp]];
+    
+    tmp = [self.winningTicketPickerView selectedRowInComponent:4];
+    [self.winningNumbers addObject:[NSNumber numberWithInteger:tmp]];
+    
+    tmp = [self.winningTicketPickerView selectedRowInComponent:5];
+    [self.winningNumbers addObject:[NSNumber numberWithInteger:tmp]];
+    
+     [self.delegate winningTicketWasChosen: self.winningNumbers];
+    
     return;
 }
 
@@ -51,19 +65,19 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-   if ([segue.identifier isEqualToString:@"winningNumberPickerViewSegue"])
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+   if ([segue.identifier isEqualToString:@"CompareWinningNumbersSeque"])
    {
-       WinningNumberViewController *winningNumVC = [segue destinationViewController];
-        winningNumVC.delegate=self;
+      
    }
     
  
     
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
+    
+} */
 
 #pragma mark - Picker View Data Source
 
@@ -84,13 +98,7 @@
     return [NSString stringWithFormat:@"%ld", (long)  row + 1];
 }
 
-#pragma mark
 
--(void)winningTicketWasChosen:(NSMutableArray *)winningNumbers
-{
-  //  cell.textLabel.text = [winningNumbers ticketText];
- //   return cell;
-}
 
 
 @end

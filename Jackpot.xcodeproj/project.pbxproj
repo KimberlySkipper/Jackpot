@@ -10,11 +10,11 @@
 		2C14D1401DECB1BF009C9C3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D13F1DECB1BF009C9C3C /* main.m */; };
 		2C14D1431DECB1BF009C9C3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1421DECB1BF009C9C3C /* AppDelegate.m */; };
 		2C14D1461DECB1BF009C9C3C /* JackpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1451DECB1BF009C9C3C /* JackpotViewController.m */; };
-		2C14D1491DECB1BF009C9C3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D1471DECB1BF009C9C3C /* Main.storyboard */; };
 		2C14D14B1DECB1BF009C9C3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */; };
 		2C14D14E1DECB1BF009C9C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C14D14C1DECB1BF009C9C3C /* LaunchScreen.storyboard */; };
 		2C14D1571DECB39E009C9C3C /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D1561DECB39E009C9C3C /* Ticket.m */; };
 		2C14D15D1DEE2AA9009C9C3C /* WinningNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D15C1DEE2AA9009C9C3C /* WinningNumberViewController.m */; };
+		2C1A13C21DF4D7350021AC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1A13C01DF4D7350021AC49 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		2C14D1421DECB1BF009C9C3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C14D1441DECB1BF009C9C3C /* JackpotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JackpotViewController.h; sourceTree = "<group>"; };
 		2C14D1451DECB1BF009C9C3C /* JackpotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackpotViewController.m; sourceTree = "<group>"; };
-		2C14D1481DECB1BF009C9C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C14D14D1DECB1BF009C9C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C14D14F1DECB1BF009C9C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		2C14D1561DECB39E009C9C3C /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		2C14D15B1DEE2AA9009C9C3C /* WinningNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningNumberViewController.h; sourceTree = "<group>"; };
 		2C14D15C1DEE2AA9009C9C3C /* WinningNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningNumberViewController.m; sourceTree = "<group>"; };
+		2C1A13C11DF4D7350021AC49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +64,13 @@
 		2C14D13D1DECB1BF009C9C3C /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
+				2C1A13C01DF4D7350021AC49 /* Main.storyboard */,
 				2C14D1411DECB1BF009C9C3C /* AppDelegate.h */,
 				2C14D1421DECB1BF009C9C3C /* AppDelegate.m */,
 				2C14D1441DECB1BF009C9C3C /* JackpotViewController.h */,
 				2C14D1451DECB1BF009C9C3C /* JackpotViewController.m */,
 				2C14D1551DECB39E009C9C3C /* Ticket.h */,
 				2C14D1561DECB39E009C9C3C /* Ticket.m */,
-				2C14D1471DECB1BF009C9C3C /* Main.storyboard */,
 				2C14D15B1DEE2AA9009C9C3C /* WinningNumberViewController.h */,
 				2C14D15C1DEE2AA9009C9C3C /* WinningNumberViewController.m */,
 				2C14D14A1DECB1BF009C9C3C /* Assets.xcassets */,
@@ -147,9 +147,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1A13C21DF4D7350021AC49 /* Main.storyboard in Resources */,
 				2C14D14E1DECB1BF009C9C3C /* LaunchScreen.storyboard in Resources */,
 				2C14D14B1DECB1BF009C9C3C /* Assets.xcassets in Resources */,
-				2C14D1491DECB1BF009C9C3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,20 +171,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C14D1471DECB1BF009C9C3C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C14D1481DECB1BF009C9C3C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C14D14C1DECB1BF009C9C3C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2C14D14D1DECB1BF009C9C3C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2C1A13C01DF4D7350021AC49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C1A13C11DF4D7350021AC49 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

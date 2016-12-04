@@ -13,15 +13,18 @@
 
 @property NSMutableArray *listOfTickets;
 
-
 @end
 
 @implementation JackpotViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.listOfTickets = [[NSMutableArray alloc] init];
+    if (!self.listOfTickets)
+    {
+        self.listOfTickets = [[NSMutableArray alloc] init];
+    }
 }
 
 
@@ -30,15 +33,26 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)winningTicketWasChosen:(NSMutableArray *) winningNumbers{
-    NSLog(@"hell.....o");
+-(void)winningTicketWasChosen:(NSMutableArray *) winningNumbers
+{
+    
+    // loop through all tickets and check each one
+    for (int i=0; i<self.listOfTickets.count; i++)
+    {
+        [self.listOfTickets[i] checkWithWinningTicket:winningNumbers];
+    }
+    
+
+    // reload table data
+    [self.tableView reloadData];
+
 }
 
 
 -(IBAction)addTicket:(UIBarButtonItem *)sender
 {
-   // Ticket *tmpTicket = [[Ticket alloc] initWithQuickPick];
-    
+   // Ticket *tmpTicket = [Ticket alloc]; (have a ticket in memory and reference *tmp ticket is pointed at the ticket)
+   // [tmpTicket initWithQuickPick];
    // [self.listOfTickets addObject:tmpTicket];
     
     [self.listOfTickets addObject:[[Ticket alloc] initWithQuickPick]];
@@ -47,6 +61,16 @@
     [self.tableView reloadData];
 }
 
+#pragma mark -Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"selectWinningNumberPickerViewSegue"])
+    {
+        UIPickerView *numberPickerVC = (UIPickerView *)[segue destinationViewController];
+        numberPickerVC.delegate = self;
+    }
+}
 
 
 
